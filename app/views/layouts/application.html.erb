@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TechUniv</title>
+    <title>Tech University</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,9 +10,18 @@
   </head>
 
   <body>
-    <%= link_to 'home', root_path %>
-    <%= link_to 'about', about_path %>
-    <%= link_to 'new course', courses_new_path %>
-    <%= yield %>
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo right">Tech University</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Enrollments</a></li>
+          <li><a href="#">Account</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
