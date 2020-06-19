@@ -5,6 +5,5 @@ class CoursesController < ApplicationController
     @courses = Course.all
   end
 
-  def new
-  end
+  def new; end
 end
